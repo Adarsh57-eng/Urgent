@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VBHARAT</title>
+    <link rel="stylesheet" href="pilgrimages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<style>
+  /* Style for the dropdown suggestions */
+  .dropdown-suggestions {
+      border: 1px solid #ccc;
+      max-height: 200px;
+      overflow-y: auto;
+      display: none; /* Hide initially */
+      position: absolute;
+      background: black;
+      z-index: 1; margin-top: 50px;
+      width: calc(100% - 900px); /* Adjust width to match the search bar */
+  }
+
+  .suggestion {
+      padding: 10px;
+      cursor: pointer;
+  }
+
+  .suggestion:hover {
+      background-color: gray; /* Highlight on hover */
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar sticky">
+  <div class="logo">
+    <a href="index.html">
+      <img src="media/LOGO.PNG" alt="VR Pilgrimage Logo" />
+  </div>
+  <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pilgrimages.html">Pilgrimages</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#contact.html">Contact</a></li>
+      <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+  </ul>
+
+  <!-- Language Selection Button -->
+  <div class="dropdown">
+      <button class="language-btn">Select Language</button>
+      <div class="dropdown-content">
+          <a href="?lang=en">English</a>
+          <a href="?lang=hi">Hindi</a>
+          <a href="?lang=es">Spanish</a>
+          <a href="?lang=fr">French</a>
+      </div>
+  </div>
+</nav>
+
+<div class="page-container">
+  <div class="left-section">
+      <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-bar" id="search-bar" oninput="showSuggestions(this.value)">
+          <div id="suggestions" class="dropdown-suggestions"></div> <!-- Suggestions dropdown -->
+          <br>
+          <button class="search-button">Search</button>
+      </div>
+      <br><br>
+      <div class="results-info">
+          <h1>SHOWING 14 RESULTS</h1>
+          <div class="view-options">
+              <button>
+                  <i class="fas fa-th"></i> 
+              </button>
+              <button>
+                  <i class="fas fa-list"></i>
+              </button>
+          </div>
+      </div>
+       <div class="image-grid">
+        <!-- Repeat this block for 14 images -->
+
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/GOLDEN_TEMPLE.png" alt="Temple Image">
+          <h2>DARBAR SAHIB</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+        
+
+        <a href="PREM_MANDIR.HTML" class="image-block">
+          <img src="media/PREMMANDIR_IMAGE.jpg" alt="Temple Image">
+          <h2>PREM MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/RAMMANDIR.webp" alt="Temple Image">
+          <h2>RAM MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+
+
+
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/KEDARNATH_TEMPLE.png" alt="Temple Image">
+          <h2>KEDARNATH MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+        
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/babulnathtemple_image.jpg" alt="Temple Image">
+          <h2>BABULNATH MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/JAGGANATHTEMPLE_IMAGE.webp" alt="Temple Image">
+          <h2>JAGGANATH MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/TIRUPATIBALAJI_TEMPLE.jpg" alt="Temple Image">
+          <h2>TIRUPATIBALAJI MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+        
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/GOLDEN_TEMPLE.png" alt="Temple Image">
+          <h2>GOLDEN TEMPLE</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+        
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/PREMMANDIR_IMAGE.jpg" alt="Temple Image">
+          <h2>PREM MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/RAMMANDIR.webp" alt="Temple Image">
+          <h2>RAM MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+
+
+
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/KEDARNATH_TEMPLE.png" alt="Temple Image">
+          <h2>KEDARNATH MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+        
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/TIRUPATIBALAJI_TEMPLE.jpg" alt="Temple Image">
+          <h2>TIRUPATI MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/JAGGANATHTEMPLE_IMAGE.webp" alt="Temple Image">
+          <h2>JAGGANATH MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+
+        <a href="DARBAR-SAHIB.HTML" class="image-block">
+          <img src="media/babulnathtemple_image.jpg" alt="Temple Image">
+          <h2>BABULNATH MANDIR</h2><br>
+          <p class="text-color"><i class="fas fa-map-marker-alt"></i> JVCG+2J2, Golden Temple Way, Town Hall, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab-143006</p>
+        </a>
+        
+
+
+
+        <!-- ... other image blocks ... -->
+      </div>
+    </div>
+
+  <div class="right-section">
+      <div id="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15049.84683288044!2d72.81609734999999!3d19.435650550000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1727961915755!5m2!1sen!2sin" width="500" height="680" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+</div>
+
+<br><br>   
+   <!-- Footer Section -->
+   <footer class="footer">
+    <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <br>
+        <br>
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blogs & Articles</a></li>
+            <li><a href="term&con.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section instagram">
+        <h3>Instagram</h3>
+        <br>
+        <br>
+        <div class="instagram-gallery">
+            <div class="instagram-image"><img src="media/download.jpeg" alt="Instagram Image 1"></div>
+            <div class="instagram-image"><img src="media/GOLDEN_TEMPLE.png" alt="Instagram Image 2"></div>
+            <div class="instagram-image"><img src="media/KEDARNATH_TEMPLE.png" alt="Instagram Image 3"></div>
+            <div class="instagram-image"><img src="media/PREMMANDIR_IMAGE.jpg" alt="Instagram Image 4"></div>
+            <div class="instagram-image"><img src="media/RAMMANDIR.webp" alt="Instagram Image 5"></div>
+            <div class="instagram-image"><img src="media/TIRUPATIBALAJI_TEMPLE.jpg" alt="Instagram Image 6"></div>
+        </div>
+    </div>
+
+    <div class="footer-section contact">
+        <h3>Contact Us</h3><br>
+
+        <br>
+        <p>SLRTCE Miraroad East - 400101</p><br>
+        <p>Adarsh.a.singh@slrtce.in</p><br>
+        <p>+91 9324618958</p>
+    </div>
+</footer>
+
+<!-- Border Area -->
+<div class="border-area">
+    <div class="terms">
+        <a href="term&con.html">Terms of Use</a>  <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+    <div class="copyright">
+        2024 © All rights reserved by VBHARAT
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
+<script>
+  // Predefined temple data
+  const temples = [
+      { name: "DARBAR SAHIB", link: "DARBAR-SAHIB.HTML" },
+      { name: "Prem Mandir", link: "PREM_MANDIR.HTML" },
+      { name: "Ram Mandir", link: "DARBAR-SAHIB.HTML" },
+      { name: "Kedarnath Mandir", link: "DARBAR-SAHIB.HTML" },
+      { name: "Babulnath Mandir", link: "DARBAR-SAHIB.HTML" },
+      { name: "Jagannath Mandir", link: "DARBAR-SAHIB.HTML" },
+      { name: "Tirupati Balaji Mandir", link: "TIRUPATIBALAJI_TEMPLE.HTML" },
+      // Add more temples as needed
+  ];
+
+  // Function to show suggestions based on input
+  function showSuggestions(value) {
+      const suggestions = document.getElementById('suggestions');
+      suggestions.innerHTML = ''; // Clear previous suggestions
+      if (value) {
+          const filteredTemples = temples.filter(temple => 
+              temple.name.toLowerCase().includes(value.toLowerCase())
+          );
+          filteredTemples.forEach(temple => {
+              const suggestion = document.createElement('div');
+              suggestion.classList.add('suggestion');
+              suggestion.textContent = temple.name;
+              suggestion.onclick = function () {
+                  window.location.href = temple.link; // Navigate to the temple's page
+              };
+              suggestions.appendChild(suggestion);
+          });
+          suggestions.style.display = filteredTemples.length ? 'block' : 'none'; // Show suggestions if any
+      } else {
+          suggestions.style.display = 'none'; // Hide if input is empty
+      }
+  }
+
+  // Hide suggestions when clicking outside
+  window.onclick = function(event) {
+      if (!event.target.matches('.search-bar')) {
+          const suggestions = document.getElementById('suggestions');
+          suggestions.style.display = 'none';
+      }
+  };
+</script>
+</body>
+</html>
